@@ -27,21 +27,100 @@
   <link rel="stylesheet" href="css/main.css">
 
   <meta name="theme-color" content="#2d6df7">
-  <style>
-    body {
+   <style>
+body {
 	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
 	font-weight: 300;
-	background: #fafafa
+	background: #8a9aaa;
+	color: #fafafa;
+    }
+    
+#content{
+	max-width: 768px;
+	background-color: #213f94;
+	padding-bottom: 2rem;
+}
+
+.date{
+
+    font-size: 2rem;
+    margin: 2.5rem 0rem;
+    
+}
+    div,section,img{
+	box-sizing: border-box;
+   	width:100%;
+    }
+    #frame{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+    }
+
+    
+    section h1{
+
+	margin-bottom: 0;
+    }
+    section h2{
+	margin-top:0;
+	font-size: 1.2rem;
+    }
+
+    #content > section{
+	padding-left: 1rem;
+	padding-right: 1rem;
+    }
+
+    img,window,document,body{
+	padding:0;
+	margin:0;
+	outline:0;
+    }
+   
+    .img-head{
+	width:100%;
+	height:auto;
     }
   </style>
 </head>
 
 <body>
   
-  <section lang="el-GR">
-    <h1>Sozzura</h1>
-    <p>Text Image here</p>
-  </section>
+  <div id="frame">
+    <div id="content">
+      <img width="1024" height="1448" class="img-head" src="img/sozzura_2020-08-13_std_1024.jpg"/>
+      <section class="date">
+      Σθγκρατήςτε την ημερομηνία / Save the date: <br/><strong>13/08  19:30 </strong>
+      </section>
+      <section lang="el-GR">
+      <h1>ΣΟΤΣΟΥΡΑ</h1>
+      <h2>Επινοηµένο Σωµατικό Θέατρο</h2>
+<p>
+Συνδυάζοντας την µιµική, το butoh, το χορευτικό αυτοσχεδιασµό και κλόουν τρεις
+περφορµερ σωµατικού Θεάτρου αναλαµβάνουν το φυσικό - και το όχι τόσο φυσικό -
+περιβάλλον που βρίσκεται πίσω από το πρώην δηµοτικό σχολείο του Τσιβαρά. Πανύψηλα
+πεύκα, ένας µπλε κάδος, µία πόρτα, µια καρέκλα και η θάλασσα στο βάθος. Μέσα στο
+πνεύµα της παράστασης, οι τρεις τους γυρίζουν και αναποδογυρίζουν τον κόσµο που
+ανακαλύπτουν.<br/>
+Ίσως θέατρο; Σίγουρα απόρριµµα</p>
+    </section>
+    <section lang="en-GB">
+      <h1>SΟZZURA</h1>
+      <h2>Devised Physical Theatre</h2>
+      <p>
+Combining mime, butoh, dance improvisation and clowning, three physical performers take
+on the natural - and, not so natural - environment found behind the old school of Tsivara.
+Tall pine trees, a blue recycling bin, a door, a chair and the distant sea. In the spirit of play,
+the three turn and overturn the world they encounter.
+<br/>Maybe theatre? Definitely rubbish.
+</p>
+
+      </section>
+       
+    </div>
+  </div>
   
 </body>
 
