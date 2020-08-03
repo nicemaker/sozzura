@@ -18,108 +18,132 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://sozzura.page">
   <meta property="og:image" content="">
+  <meta name="theme-color" content="#2d6df7">
+  <script>
+   function initMap() {
 
+       var uluru = {lat: 35.436883, lng: 24.178932};
+       // The map, centered at Uluru
+       var map = new google.maps.Map(
+	   document.getElementById('map'), {zoom: 16, center: uluru});
+       // The marker, positioned at Uluru
+       var marker = new google.maps.Marker({position: uluru, map: map});
+   }  
+  </script>
+  <script defer
+	  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAh0d4LU_fsQCq-bSIU6a9x5gcjjvu6CU4&callback=initMap">
+  </script>
   <link rel="manifest" href="site.webmanifest">
   <link rel="apple-touch-icon" href="icon.png">
   <!-- Place favicon.ico in the root directory -->
 
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/main.css">
+  
+  <style>
+   body {
+       font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+       font-weight: 300;
+       background: #8a9aaa;
+       color: #fafafa;
+       font-size: 1.2rem;
+   }
+   #map {
+       height: 400px;  /* The height is 400 pixels */
+       width: 100%;  /* The width is the width of the web page */
+   }    
+   #content{
+       max-width: 768px;
+       background-color: #213f94;
 
-  <meta name="theme-color" content="#2d6df7">
-   <style>
-body {
-	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
-	font-weight: 300;
-	background: #8a9aaa;
-	color: #fafafa;
-	font-size: 1.2rem;
-}
-    
-#content{
-	max-width: 768px;
-	background-color: #213f94;
-	padding-bottom: 2rem;
-}
+   }
 
-.date{
+   .date{
 
-    font-size: 2rem;
-    margin: 2.5rem 0rem;
-    
-}
-    div,section,img{
-	box-sizing: border-box;
-   	width:100%;
-    }
-    #frame{
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-    }
+       font-size: 2rem;
+       margin: 2.5rem 0rem;
+       
+   }
 
-    
-    section h1{
+   .date a{
+       font-size: 1.5rem;
+   }
+   a{
+       color: #BBBBFB;
+   }
+   div,section,img{
+       box-sizing: border-box;
+       width:100%;
+   }
+   #frame{
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+   }
 
-	margin-bottom: 0;
-    }
-    section h2{
-	margin-top:0;
-	font-size: 1.2rem;
-    }
-
-    #content > section{
-	padding-left: 1rem;
-	padding-right: 1rem;
-    }
-
-    img,window,document,body{
-	padding:0;
-	margin:0;
-	outline:0;
-    }
    
-    .img-head{
-	width:100%;
-	height:auto;
-    }
+   section h1{
+
+       margin-bottom: 0;
+   }
+   section h2{
+       margin-top:0;
+       font-size: 1.2rem;
+   }
+
+   #content > section{
+       padding-left: 1rem;
+       padding-right: 1rem;
+   }
+
+   img,window,document,body{
+       padding:0;
+       margin:0;
+       outline:0;
+   }
+   
+   .img-head{
+       width:100%;
+       height:auto;
+   }
   </style>
 </head>
 
 <body>
-  
-  <div id="frame">
-    <div id="content">
-      <img alt="Sozzura actors cuddled up in a blue rubbish container" width="1024" height="1448" class="img-head" src="img/sozzura_2020-08-13_std_1024.jpg"/>
-      <section class="date">
-      Σθγκρατήςτε την ημερομηνία / Save the date: <br/><strong>13/08  19:30 </strong>
-      </section>
-      <section lang="el-GR">
-      <h1>ΣΟΤΣΟΥΡΑ</h1>
-      <h2>Επινοηµένο Σωµατικό Θέατρο</h2>
-<p>
-Συνδυάζοντας την µιµική, το butoh, το χορευτικό αυτοσχεδιασµό και κλόουν τρεις
-περφορµερ σωµατικού Θεάτρου αναλαµβάνουν το φυσικό - και το όχι τόσο φυσικό -
-περιβάλλον που βρίσκεται πίσω από το πρώην δηµοτικό σχολείο του Τσιβαρά. Πανύψηλα
-πεύκα, ένας µπλε κάδος, µία πόρτα, µια καρέκλα και η θάλασσα στο βάθος. Μέσα στο
-πνεύµα της παράστασης, οι τρεις τους γυρίζουν και αναποδογυρίζουν τον κόσµο που
-ανακαλύπτουν.<br/>
-Ίσως θέατρο; Σίγουρα απόρριµµα</p>
-    </section>
-    <section lang="en-GB">
-      <h1>SΟZZURA</h1>
-      <h2>Devised Physical Theatre</h2>
-      <p>
-Combining mime, butoh, dance improvisation and clowning, three physical performers take
-on the natural - and, not so natural - environment found behind the old school of Tsivara.
-Tall pine trees, a blue recycling bin, a door, a chair and the distant sea. In the spirit of play,
-the three turn and overturn the world they encounter.
-<br/>Maybe theatre? Definitely rubbish.
-</p>
+    
+    <div id="frame">
+	<div id="content">
+	    <img alt="Sozzura actors cuddled up in a blue rubbish container" width="1024" height="1448" class="img-head" src="img/sozzura_2020-08-13_std_1024.jpg"/>
+	    <section class="date">
+		Σθγκρατήςτε την ημερομηνία / Save the date: <br/><strong>13/08  19:30 </strong><a href="sozzura.ics">Add to Calendar</a>
+	    </section>
+	    <section lang="el-GR">
+		<h1>ΣΟΤΣΟΥΡΑ</h1>
+		<h2>Επινοηµένο Σωµατικό Θέατρο</h2>
+		<p>
+		    Συνδυάζοντας την µιµική, το butoh, το χορευτικό αυτοσχεδιασµό και κλόουν τρεις
+		    περφορµερ σωµατικού Θεάτρου αναλαµβάνουν το φυσικό - και το όχι τόσο φυσικό -
+		    περιβάλλον που βρίσκεται πίσω από το πρώην δηµοτικό σχολείο του Τσιβαρά. Πανύψηλα
+		    πεύκα, ένας µπλε κάδος, µία πόρτα, µια καρέκλα και η θάλασσα στο βάθος. Μέσα στο
+		    πνεύµα της παράστασης, οι τρεις τους γυρίζουν και αναποδογυρίζουν τον κόσµο που
+		    ανακαλύπτουν.<br/>
+		    Ίσως θέατρο; Σίγουρα απόρριµµα</p>
+	    </section>
+	    <section lang="en-GB">
+		<h1>SΟZZURA</h1>
+		<h2>Devised Physical Theatre</h2>
+		<p>
+		    Combining mime, butoh, dance improvisation and clowning, three physical performers take
+		    on the natural - and, not so natural - environment found behind the old school of Tsivara.
+		    Tall pine trees, a blue recycling bin, a door, a chair and the distant sea. In the spirit of play,
+		    the three turn and overturn the world they encounter.
+		    <br/>Maybe theatre? Definitely rubbish.
+		</p>
 
-      </section>
-       
+
+	    </section>
+	    <div id="map">
+	
+    </div>
     </div>
   </div>
   
