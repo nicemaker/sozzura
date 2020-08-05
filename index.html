@@ -63,9 +63,16 @@
        
    }
 
-   .date a{
-       font-size: 1.5rem;
-   }
+   .date a, .date a:visited{
+       font-size: 1rem;
+       font-weight: bold;
+       background-color: #e8bf51;
+       display: inline-block;
+       padding:5px 10px;
+       color: #35261B;
+       text-decoration: none;
+    
+  }
    a{
        color: #BBBBFB;
    }
@@ -82,12 +89,14 @@
 
    
    section h1{
-
-       margin-bottom: 0;
+      color:#f0c660;
+      margin-bottom: 0;
    }
-   section h2{
+
+   section h1 span{
        margin-top:0;
        font-size: 1.2rem;
+       font-weight: normal;
    }
 
    #content > section{
@@ -112,15 +121,13 @@
     
     <div id="frame">
 	<div id="content">
-	    <img alt="Sozzura actors cuddled up in a blue rubbish container" width="1024" height="1448" class="img-head" src="img/sozzura_2020-08-13_std_1024.jpg"/>
+	    <img alt="Sozzura actors cuddled up in a blue rubbish container" width="1024" height="1448" class="img-head" src="assets/sozzura_2020-08-13_1024.jpg"/>
 	    <section class="date">
-		Σθγκρατήςτε την ημερομηνία / Save the date: <br/><strong>13/08  19:30 </strong>
-		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://plugins.eventable.com/eventable.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script', 'eventable-script');</script>
-	    <br/><a href="https://add.eventable.com/events/5f2837eeb2656f007981f083/5f2837f2fe32470016f2ade6" class="eventable-link" target="_blank" data-key="5f2837eeb2656f007981f083" data-event="5f2837f2fe32470016f2ade6" data-style="1">Add to Calendar</a>
+	      Συγκρατήςτε την ημερομηνία / Save the date: <br/><strong>13/08  20:30 </strong></br>
+	      <a href="/assets/sozzura.ics">Add To Calendar</a>
 	    </section>
 	    <section lang="el-GR">
-		<h1>ΣΟΤΣΟΥΡΑ</h1>
-		<h2>Επινοηµένο Σωµατικό Θέατρο</h2>
+		<h1>ΣΟΤΣΟΥΡΑ <span>Επινοηµένο Σωµατικό Θέατρο</span></h1>
 		<p>
 		    Συνδυάζοντας την µιµική, το butoh, το χορευτικό αυτοσχεδιασµό και κλόουν τρεις
 		    περφορµερ σωµατικού Θεάτρου αναλαµβάνουν το φυσικό - και το όχι τόσο φυσικό -
@@ -131,8 +138,7 @@
 		    Ίσως θέατρο; Σίγουρα απόρριµµα</p>
 	    </section>
 	    <section lang="en-GB">
-		<h1>SΟZZURA</h1>
-		<h2>Devised Physical Theatre</h2>
+		<h1>SΟZZURA <span>Devised Physical Theatre</span></h1>
 		<p>
 		    Combining mime, butoh, dance improvisation and clowning, three physical performers take
 		    on the natural - and, not so natural - environment found behind the old school of Tsivara.
@@ -143,7 +149,7 @@
 
 
 	    </section>
-	    <div id="map">
+	    <div id="map"/>
 	
     </div>
     </div>
