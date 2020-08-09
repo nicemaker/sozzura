@@ -8,7 +8,6 @@
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'UA-174550151-1');
 </script>
 
@@ -16,7 +15,6 @@
   <title>Sozzura - Site-Specific Devised Physical Theater</title>
   <meta name="description" content="Sozzura - Site-Specific Devised Physical Theater">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
   <meta property="og:title" content="Sozzura - Site-Specific Devised Physical Theater">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://sozzura.page">
@@ -31,7 +29,15 @@
 	   document.getElementById('map'), {zoom: 16, center: uluru});
        // The marker, positioned at Uluru
        var marker = new google.maps.Marker({position: uluru, map: map});
-   }  
+   }
+
+    var isEl = true;
+    function toggleLang(){
+	isEl = !isEl;
+	document.getElementById("el").style.display = isEl ? 'block':'none';
+	document.getElementById("en").style.display = isEl ? 'none':'block';
+    }
+    
   </script>
   <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAh0d4LU_fsQCq-bSIU6a9x5gcjjvu6CU4&callback=initMap"></script>
   <link rel="manifest" href="site.webmanifest">
@@ -47,6 +53,7 @@
        color: #fafafa;
        font-size: 1.2rem;
    }
+   
    #map {
        height: 400px;  /* The height is 400 pixels */
        width: 100%;  /* The width is the width of the web page */
@@ -57,6 +64,13 @@
 
    }
 
+   #en,#el{
+       display:block;
+   }
+   #en{
+       display:none;
+   }
+
    .date{
 
        font-size: 1.2rem;
@@ -65,11 +79,11 @@
        padding:10px 8px;
        width: auto;
        display: block;
-   background: #4661b4;
-   -webkit-border-radius: 10px;
-   -moz-border-radius: 10px;
-   border-radius: 10px;
-   text-align:right
+       background: #4661b4;
+       -webkit-border-radius: 10px;
+       -moz-border-radius: 10px;
+       border-radius: 10px;
+       text-align:right
    }
 
    .date:after{
@@ -92,11 +106,14 @@
        padding:5px 10px;
        color: #35261B;
        text-decoration: none;
+       margin-top: 1rem;
     
   }
    a{
        color: #BBBBFB;
    }
+
+  
    div,section,img{
        box-sizing: border-box;
        width:100%;
@@ -112,6 +129,7 @@
    section h1{
       color:#f0c660;
       margin-bottom: 0;
+      margin-top: 0;
    }
 
    section h1 span{
@@ -120,11 +138,40 @@
        font-weight: normal;
    }
 
-   #content > section{
+   section h2{
+       font-size: 1.2rem;
+       margin-bottom: 0.3rem;
+   }
+
+   section h2 + p{
+       margin-top:0;
+   }
+
+   .toggle-describe,.describe section > *{
        padding-left: 1rem;
        padding-right: 1rem;
    }
 
+   .describe section{
+       clear:both;
+   }
+   
+   a.toggle-describe,a.toggle-describe:visited{
+       float: right;
+       text-decoration:none;
+       padding-bottom: 0.7rem;
+       padding-top: 0.0rem;
+   }
+
+   .toggle-describe span{
+       color: #f65d5d;
+       text-transform: uppercase;
+       text-decoration: underline;
+       font-weight: bold;
+       font-style: italic;
+   }
+
+   
    img,window,document,body{
        padding:0;
        margin:0;
@@ -147,29 +194,54 @@
 	      Συγκρατήστε την ημερομηνία <br/> Save the date: <br/><strong>13/08  20:30</strong></br>
 	      <a href="https://bng-a3lpds.s3.eu-central-1.amazonaws.com/sozzura/sozzura.ics">Add To Calendar</a>
 	    </section>
-	    <section lang="el-GR">
+	    <section>
+	    </section>
+	    
+	    <div class="describe" id="el">
+	      <a class="toggle-describe" href="javascript:toggleLang()">In <span>English</span> please!</a>
+	      <section lang="el-GR">
 		<h1>ΣΟΤΣΟΥΡΑ <span>Επινοηµένο Σωµατικό Θέατρο</span></h1>
 		<p>
-		    Συνδυάζοντας την µιµική, το butoh, το χορευτικό αυτοσχεδιασµό και κλόουν τρεις
-		    περφορµερ σωµατικού Θεάτρου αναλαµβάνουν το φυσικό - και το όχι τόσο φυσικό -
-		    περιβάλλον που βρίσκεται πίσω από το πρώην δηµοτικό σχολείο του Τσιβαρά. Πανύψηλα
-		    πεύκα, ένας µπλε κάδος, µία πόρτα, µια καρέκλα και η θάλασσα στο βάθος. Μέσα στο
-		    πνεύµα της παράστασης, οι τρεις τους γυρίζουν και αναποδογυρίζουν τον κόσµο που
-		    ανακαλύπτουν.<br/>
-		    Ίσως θέατρο; Σίγουρα απόρριµµα</p>
-	    </section>
-	    <section lang="en-GB">
+		  Συνδυάζοντας την µιµική, το butoh, το χορευτικό αυτοσχεδιασµό και κλόουν τρεις
+		  περφοµερ σωµατικού Θεάτρου αναλαµβάνουν το φυσικό - και το όχι τόσο φυσικό -
+		  περιβάλλον που βρίσκεται πίσω από το πρώην δηµοτικό σχολείο του Τσιβαρά. Πανύψηλα
+		  πεύκα, ένας µπλε κάδος, µία πόρτα, µια καρέκλα και η θάλασσα στο βάθος. Μέσα στο
+		  πνεύµα της παράστασης, οι τρεις τους γυρίζουν και αναποδογυρίζουν τον κόσµο που
+		  ανακαλύπτουν.<br/>
+		  Ίσως θέατρο; Σίγουρα απόρριµµα</p>
+		<h2>Αναστάσιος Σιουμάλας</h2>
+		<p>Καθηγητής φυσικής αγωγής, δάσκαλος γιόγκα/πιλάτες και χορευτής αλλά και μαθητής σε μια αέναη αναζήτηση του αμερόληπτου σώμα-νους-πνεύμα.</p>
+		<h2>Ελίζα Μπεννατι </h2>
+		<p>Δασκάλα και περφόρμερ butoh, εκπαιδευτής Aikido, αγαπάει να χορεύει στην φύση και να δημιουργεί σκηνικά αντλούμενα μέσα από τις ενδογενείς αισθήσεις, την κίνηση και χώρους.</p>
+		<h2>Μπιόρν Υκράμπο</h2>
+		<p>
+		  Εκπαιδευμένος μίμος και κλόουν, με επιπρόσθετο πάθος για τις πολεμικές τέχνες. Δημιουργός και συντονιστής χώρων ψυχαγωγίας και διασκέδασης
+		</p>
+		<h2>Μάρκγο Νούκιρκ</h2>
+		<p>Σκηνοθέτιδα, συγγραφέας και δασκάλα θεάτρου που αγαπάει την μουσική της γλώσσας και τις μεγάλες συμφωνικές κινήσεις.</p>
+	      </section>
+	    </div>
+	    <div class="describe" id="en">
+	      <a class="toggle-describe" href="javascript:toggleLang()">Στα <span>Ελληνικά</span> σε παρακαλώ!</a>
+	      <section lang="en-GB">
 		<h1>SΟZZURA <span>Site-Specific Devised Physical Theatre</span></h1>
 		<p>
-		    Combining mime, butoh, dance improvisation and clowning, three physical performers take
-		    on the natural - and, not so natural - environment found behind the old school of Tsivara.
-		    Tall pine trees, a blue recycling bin, a door, a chair and the distant sea. In the spirit of play,
-		    the three turn and overturn the world they encounter.
-		    <br/>Maybe theatre? Definitely rubbish.
+		  Combining mime, butoh, dance improvisation and clowning, three physical performers take
+		  on the natural - and, not so natural - environment found behind the old school of Tsivara.
+		  Tall pine trees, a blue recycling bin, a door, a chair and the distant sea. In the spirit of play,
+		  the three turn and overturn the world they encounter.
+		  <br/>Maybe theatre? Definitely rubbish.
 		</p>
-
-
-	    </section>
+		<h2>Anastasios Sioumalas</h2>
+		<p>Physical educator, yoga/pilates teacher and dancer, as well as student on an eternal quest for the non-discriminating mind-body-soul.</p>
+		<h2>Elisa Bennati</h2>
+		<p>Butoh performer and teacher, Aikido trainer, loves to dance in nature and create sceneries coming out of inner sensations, movement and spaces.</p>
+		<h2>Björn Grambow</h2>
+		<p>Trained Mime and Clown with an additional passion for Martial Arts. Creator of playful spaces and the methods to access them.</p>
+		<h2>Margot Newkirk</h2>
+		<p>Director, writer and theatre teacher who loves the music of language and large, ensemble movements.</p>
+	      </section>
+	    </div>
 	    <div id="map"/>
 	
     </div>
