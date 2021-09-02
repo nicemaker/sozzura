@@ -155,8 +155,12 @@
        margin-bottom: 0.3rem;
    }
 
-   section p{
-       text-indent: 1rem;
+
+   @media only screen and (min-width: 600px) {
+       section{
+           padding-left: 1rem;
+           padding-right: 1rem;
+       }
    }
    section h2 + p{
        margin-top:0;
@@ -204,7 +208,7 @@
     
     <div id="frame">
 	<div id="content">
-	    <img alt="Sozzura actors cuddled up in a blue rubbish container" width="1440" height="2037" class="img-head" src="assets/sozzura_2021-09-04.jpg"/>
+	    <img alt="Sozzura actors cuddled up in a blue rubbish container" width="1440" height="2037" class="img-head" src="assets/sozzura_2021-09-5_6.jpg"/>
 	    <!-- <section class="date"> -->
 	    <!--   Συγκρατήστε την ημερομηνία <br/> Save the date: <br/><strong>13/08  20:00</strong></br> -->
 	    <!--   <a href="https://bng-a3lpds.s3.eu-central-1.amazonaws.com/sozzura/sozzura.ics">Add To Calendar</a> -->
@@ -212,16 +216,14 @@
 	    <div class="describe" id="el">
 	      <a class="toggle-describe" href="javascript:toggleLang()">In <span>English</span> please!</a>
 	      <section lang="el-GR">
-		<h1>ΣΟΤΣΟΥΡΑ <span>Επινοηµένο Σωµατικό Θέατρο</span></h1>
-		<p>
-		  &nbsp;Μαρτυρικά δέντρα, ένας μπλε κάδος, μια πόρτα, μια καρέκλα και η θάλασσα στο βάθος.
-      <br/>
-      &nbsp;Μια χοροθεατρική παράσταση όπου συναντιούνται 4 θεατρικές διάλεκτοι: η μιμική τέχνη, ο γιαπωνέζικος χορός μπούτο, ο χορευτικός αυτοσχεδιασμός και η τέχνη του κλόουν.
-		  Ίσως θέατρο; Σίγουρα απόρριµµα
-      <br/>
-      &nbsp;Tρεις συμβολικοί χαρακτήρες: ένας κτηνάνθρωπος, μια θεότητα της φύσης και ένας στυγνός σύγχρονος επιχειρηματίας. 
-      <br/>
-      &nbsp;Μέσα σε ένα πλαίσιο αμιγώς παιγνιώδες, απαράμιλλα ενστικτώδες και αποφεύγοντας σκόπιμα την προφανή κατεύθυνση της ηθικής, οι τρεις τους αναποδογυρίζουν το περιεχόμενο του κάδου, γεμίζοντας τον χώρο με πλαστικά σκουπίδια. Ανάμεσα στα πλαστικά μπάζα, οι χαρακτήρες μας συναντιούνται, χορεύουν, παλεύουν, κάνουν έρωτα και τελικά κυριεύονται από την sozzura (η βρωμιά). Ρωμαλέοι χειρισμοί αντικειμένων, σωματικές άρσεις / ακροβατικά, σκηνές κλόουν με το κοινό, αισθησιακός χορευτικός αυτοσχεδιασμός και σποραδική χρήση λόγου.
+		<h1>ΣΟΤΣΟΥΡΑ <span>Σωµατικό Θέατρο</span></h1>
+		<p>Μαρτυρικά δέντρα, ένας μπλε κάδος, μια πόρτα, μια καρέκλα και η θάλασσα στο βάθος.</p>
+    <p>Μια χοροθεατρική παράσταση όπου συναντιούνται 4 θεατρικές διάλεκτοι: η μιμική τέχνη, ο γιαπωνέζικος χορός μπούτο, ο χορευτικός αυτοσχεδιασμός και η τέχνη του κλόουν.</p>
+    <p>Tρεις συμβολικοί χαρακτήρες: ένας κτηνάνθρωπος, μια θεότητα της φύσης και ένας στυγνός σύγχρονος επιχειρηματίας.</p>
+    <p>Μέσα σε ένα πλαίσιο αμιγώς παιγνιώδες, απαράμιλλα ενστικτώδες και αποφεύγοντας σκόπιμα την προφανή κατεύθυνση της ηθικής, οι τρεις τους αναποδογυρίζουν το περιεχόμενο του κάδου, γεμίζοντας τον χώρο με πλαστικά σκουπίδια. Ανάμεσα στα πλαστικά μπάζα, οι χαρακτήρες μας συναντιούνται, χορεύουν, παλεύουν, κάνουν έρωτα και τελικά κυριεύονται από την sozzura (η βρωμιά).</p>
+    <p>Ρωμαλέοι χειρισμοί αντικειμένων, σωματικές άρσεις / ακροβατικά, σκηνές κλόουν με το κοινό, αισθησιακός χορευτικός αυτοσχεδιασμός και σποραδική χρήση λόγου.</p>
+  <p> Ίσως θέατρο;<br/>
+    Σίγουρα απόρριμα.
     </p>
 		<h2>Αναστάσιος Σιουμάλας</h2>
 		<p>&nbsp;Καθηγητής φυσικής αγωγής, δάσκαλος γιόγκα/πιλάτες και χορευτής αλλά και μαθητής σε μια αέναη αναζήτηση του αμερόληπτου σώμα-νους-πνεύμα.</p>
@@ -238,14 +240,11 @@
 	    <div class="describe" id="en">
 	      <a class="toggle-describe" href="javascript:toggleLang()">Στα <span>Ελληνικά</span> σε παρακαλώ!</a>
 	      <section lang="en-GB">
-		<h1>SΟZZURA <span>Site-Specific Devised Physical Theatre</span></h1>
-		<p>
-		  Combining mime, butoh, dance improvisation and clowning, three physical performers take
-		  on the natural - and, not so natural - environment found behind the old school of Tsivara.
-		  Tall pine trees, a blue recycling bin, a door, a chair and the distant sea. In the spirit of play,
-		  the three turn and overturn the world they encounter.
-		  <br/>Maybe theatre? Definitely rubbish.
-		</p>
+		<h1>SΟZZURA <span>Physical Theatre</span></h1>
+		<p>Watchful trees, a blue recycling bin, a door, a chair and the sea beyond.</p>
+    <p>Devised physical theatre uniting four disciplines: corporeal mime, Japanese butoh, contact improvisation and clowning.</p>
+    <p>Three symbolic characters take the stage: a beast-man, an ancient Earth goddess and a modern businessman. Openly playful, instinctual, and purposefully avoiding the didactic, the three overturn the contents of the recycling bin, filling the stage with plastic. Amongst the “rubble” our characters meet, dance, fight, make love and are ultimately overtaken by the sozzura (the filth).</p>
+    <p>Maybe theatre? Definitely rubbish.</p>
 		<h2>Anastasios Sioumalas</h2>
 		<p>Physical educator, yoga/pilates teacher and dancer, as well as student on an eternal quest for the non-discriminating mind-body-soul.</p>
 		<h2>Elisa Bennati</h2>
